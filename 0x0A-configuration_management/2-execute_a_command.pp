@@ -2,5 +2,5 @@
 
 exec { 'killmenow':
   ensure  => 'killed',
-  command => ['pkill', 'killmenow']
+  command => ['/usr/bin/pkill -f', 'killmenow']
 }
