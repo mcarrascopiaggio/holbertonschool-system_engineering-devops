@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# cat ~/.ssh/school | ssh ubuntu@54.227.32.141 
+# "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+# https://opensource.com/article/20/9/sshi
+ssh -i ~/.ssh/school ubuntu@54.227.32.141
