@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Script that install nginx
+# https://www.youtube.com/watch?v=
+# _LQv96MdtCk&list=PLqRCtm0kbeHD7A5f8Yft-5qFg-sgXvGzR
+
+sudo apt update
+sudo apt-get -y install nginx 
+cd /var/www/html || exit
+sudo chmod 777 index.nginx-debian.html
+echo Hello World! > index.nginx-debian.html
+sudo sed -i '/server_name _;/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+sudo touch /var/www/html/error404-page.html
+sudo chmod 777 /var/www/html/error404-page.html
+sudo echo "Ceci n'est pas une page" > /var/www/html/error404-page.html
+sudo sed -i '55i error_page 404 /error404-page.html;' /etc/nginx/sites-enabled/default
+sudo service nginx restart
