@@ -3,13 +3,15 @@
 # Install and configure HAproxy on your lb-01 server.
 # Configure HAproxy so that it send traffic to web-01 and web-02
 # Distribute requests using a roundrobin algorithm
+# https://www.youtube.com/watch?v=7ljiOD6MbLA
+# https://linuxhostsupport.com/blog/how-to-install-and-configure-haproxy-on-ubuntu-20-04/
 sudo apt update
 sudo apt-get install -y haproxy
 echo "
 listen 3941-lb-01
-        bind 0:80
+        bind *:80
         balance roundrobin
-        server 3941-web-01 54.87.154.255 check port 80
-        server 3941-web-02 54.172.224.147 check port 80
+        server 3941-web-01 54.87.154.255:80 check
+        server 3941-web-02 54.172.224.147:80 check
 " | sudo tee -a /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
