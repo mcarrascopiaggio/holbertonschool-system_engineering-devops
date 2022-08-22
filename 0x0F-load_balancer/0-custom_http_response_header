@@ -18,7 +18,7 @@ sudo sed -i '/server_name _;/a rewrite ^/redirect_me https://www.youtube.com/wat
 # Make a copy just in case of default file before sed in that
 sudo cp /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/2Backdefault
 # New command start
-sudo sed -i "/listen \[::\]:80 default_server;/a\\tadd_header X-Served-By \"\$HOSTNAME\";" /etc/nginx/sites-available/default
+sudo sed -i "/listen 80 default_server/a add_header X-Served-By '$HOSTNAME';" /etc/nginx/sites-enabled/default
 # New command finish
 sudo touch /var/www/html/404-page.html
 sudo chmod 777 /var/www/html/404-page.html
