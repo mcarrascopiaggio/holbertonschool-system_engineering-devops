@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # find out what’s keeping your Ubuntu sandbox’s Nginx installation from listening on port 80
-sudo apt update
 sudo apt-get -y install nginx
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx restart
