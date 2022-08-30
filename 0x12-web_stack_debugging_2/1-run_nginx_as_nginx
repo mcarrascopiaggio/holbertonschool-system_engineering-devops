@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Run Nginx as Nginx
+# https://stackoverflow.com/questions/42329261/running-nginx-as-non-root-user
+# https://stackoverflow.com/questions/18004018/changing-the-user-that-nginx-worker-processes-run-under-ubuntu-12-04
+pkill apache2
+sed -i 's/80/8080/g' /etc/nginx/sites-available/default
+chmod 777 /etc/nginx/nginx.conf
+sudo -u nginx service nginx start
