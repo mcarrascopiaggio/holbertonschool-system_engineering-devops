@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Run software as another user
+# https://stackoverflow.com/questions/1988249/how-do-i-use-su-to-execute-the-rest-of-the-bash-script-as-that-user
+sudo -u "$1" whoami
