@@ -14,7 +14,6 @@ Salida: Employee EMPLOYEE_NAME is done with
 tasks(NUMBER_OF_DONE_TASKS/TOTAL_NUMBER_OF_TASKS):
 """
 import requests
-import json
 from sys import argv
 
 
