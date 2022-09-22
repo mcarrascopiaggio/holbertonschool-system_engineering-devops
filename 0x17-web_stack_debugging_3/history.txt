@@ -1,0 +1,52 @@
+    1  cd
+    2  git clone https://github.com/mcarrascopiaggio/holbertonschool-system_engineering-devops.git
+    3  sudo apt-get update
+    4  sudo apt-get install git
+    5  git clone https://github.com/mcarrascopiaggio/holbertonschool-system_engineering-devops.git
+    6  LS
+    7  ls
+    8  cd holbertonschool-system_engineering-devops/
+    9  curl -sI 127.0.0.1
+   10  ls
+   11  cd 0x17-web_stack_debugging_3/
+   12  ls
+   13  ps auxf
+   14  strace mysql
+   15  ps auxf
+   16  exit
+   17  cd
+   18  ls
+   19  cd holbertonschool-system_engineering-devops/
+   20  cd 0-strace_is_your_friend.pp
+   21  cd 0x17-web_stack_debugging_3
+   22  ls
+   23  curl -s 127.0.0.1:80 | grep Holberton
+   24  netstat -nlp
+   25  ps -aux
+   26  sudo vi /etc/php5/apache2/php.ini
+   27  curl -sI 127.0.0.1
+   28  ps -aux 
+   29  strace -p apache2
+   30  strace -p /usr/sbin/apache2
+   31  strace -p /usr/sbin/apache2.pid
+   32  strace -p "/usr/sbin/apache2.pid"
+   33  ps auxw | grep sbin/apache | awk '{print"-p " $2}' | xargs strace
+   34  ls
+   35  vi 0-strace_is_your_friend.pp 
+   36  puppet apply 0-strace_is_your_friend.pp
+   37  git add *
+   38  git commit -m "try"
+   39  git config --global user.name mcarrascopiaggio
+   40  git config --global user.email mcarrascopiaggio@gmail.com
+   41  git config  --global user.password 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
+   42  git commit -m "try"
+   43  git push
+   44  git config --global credential.helper store
+   45  curl -sI 127.0.0.1:80
+   46  curl -s 127.0.0.1:80 | grep Holberton
+   47  history
+   48  history">history > hist.txt
+
+   49  history">history > hist.txt
+
+   50  history > history.txt
